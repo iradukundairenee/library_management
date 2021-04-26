@@ -9,11 +9,10 @@ from frappe.model.document import Document
 class LibraryMember(Document):
 	def before_save(self):
 		self.full_name = f'{self.first_name} {self.last_name}'
-	def after_insert(self):
-		doc = frappe.get_doc('Library Member', self.name)
-	# 	full_name = doc.get_full_name()
-	# 	frappe.msgprint(f'{full_name}thank you for registering')
-    # def get_full_name(self):
-	# 	frappe.msgprint(f'{self.first_name} {self.last_name}')
+    # def after_insert(self):
+	#     doc = frappe.get_doc('Library Member', self.name)
+	#     full_name = doc.get_full_name()
+	#   	frappe.msgprint('thank you for registering')
 
-	
+    # def get_full_name(self):
+	# 	return f'{self.first_name} {self.last_name}'
